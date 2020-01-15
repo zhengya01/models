@@ -1,5 +1,5 @@
-# Dureader$_{\rm robust}$ Dataset
-$\rm Dureader_{\rm robust}$ is a real-word and human sourced Chinese MRC dataset. It aims to evaluate the robustness of MRC models, which focuses on the oversensitivity, overstablility and generalization challenges. The advantages of $\rm Dureader_{\rm robust}$ over existing datasets are concluded as follows:
+# DuReader<sub>robust</sub> Dataset
+DuReader<sub>robust</sub> is a real-word and human sourced Chinese MRC dataset. It aims to evaluate the robustness of MRC models, which focuses on the oversensitivity, overstablility and generalization challenges. The advantages of DuReader<sub>robust</sub> over existing datasets are concluded as follows:
 
 - Real passages and questions
 - Various challenges encountered in the real applications
@@ -7,8 +7,8 @@ $\rm Dureader_{\rm robust}$ is a real-word and human sourced Chinese MRC dataset
  
 For more details about the dataset, please refer to this [paper](None).
 
-# Dureader$_{\rm robust}$ Baseline System
-In this repository, we release the baseline system for Dureader$_{\rm robust}$ dataset. The baseline system is based on [Ernie 1.0](https://arxiv.org/abs/1904.09223), and is implemented with [PaddlePaddle](https://www.paddlepaddle.org.cn/) framework. To run the baseline system, please follow the instructions below.
+# DuReader<sub>robust</sub> Baseline System
+In this repository, we release the baseline system for DuReader<sub>robust</sub> dataset. The baseline system is based on [Ernie 1.0](https://arxiv.org/abs/1904.09223), and is implemented with [PaddlePaddle](https://www.paddlepaddle.org.cn/) framework. To run the baseline system, please follow the instructions below.
 
 ## Environment Requirements
 The baseline system has been tested on
@@ -23,7 +23,7 @@ To install PaddlePaddle, please see the [PaddlePaddle Homepage](http://paddlepa
 
 
 ## Download
-Before run the baseline system, please download the $\rm Dureader_{\rm robust}$ dataset and the pretrained model parameters (ERNIE 1.0 base):
+Before run the baseline system, please download the DuReader<sub>robust</sub> dataset and the pretrained model parameters (ERNIE 1.0 base):
 
 ```
 sh download.sh
