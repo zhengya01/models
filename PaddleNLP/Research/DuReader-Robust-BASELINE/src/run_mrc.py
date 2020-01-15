@@ -412,6 +412,7 @@ def train(args):
         input_files = []
         for input_pattern in args.predict_file:
             input_files.extend(glob.glob(input_pattern))
+        assert len(input_files) > 0, 'Can not find predict_file {}'.format(args.predict_file)
         for input_file in input_files:
             print('Run prediction on {}'.format(input_file))
             prefix = os.path.basename(input_file)
