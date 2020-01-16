@@ -8,17 +8,17 @@ fi
 echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 
 
-if [ -z "$MODEL_PATH" ];then
-    MODEL_PATH="./pretrained_model"
+if [ -z "$PRETRAINED_MODEL_PATH" ];then
+    PRETRAINED_MODEL_PATH="./pretrained_model"
 fi
-echo "MODEL_PATH=$MODEL_PATH"
+echo "PRETRAINED_MODEL_PATH=$PRETRAINED_MODEL_PATH"
 
 python -u src/run_mrc.py --use_cuda true \
                 --batch_size 4 \
                 --checkpoints output \
-                --init_pretraining_params ${MODEL_PATH}/params \
-                --vocab_path ${MODEL_PATH}/vocab.txt \
-                --ernie_config ${MODEL_PATH}/ernie_config.json \
+                --init_pretraining_params ${PRETRAINED_MODEL_PATH}/params \
+                --vocab_path ${PRETRAINED_MODEL_PATH}/vocab.txt \
+                --ernie_config ${PRETRAINED_MODEL_PATH}/ernie_config.json \
                 --save_steps 10000 \
                 --warmup_proportion 0.1 \
                 --weight_decay  0.01 \

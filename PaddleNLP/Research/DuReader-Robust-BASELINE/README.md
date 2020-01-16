@@ -51,11 +51,11 @@ One can also directly modify the arguments in `train.sh`. More arguments can be 
 To predict with fine-tuned parameters, (e.g. on the devlopment set), please run the following command:
 
 ```
-MODEL_PATH=<your_model_dir> sh predict.sh --predict_file data/dureader_robust-basic/basic.dev.json
+CKPT=<your_model_dir> sh predict.sh --predict_file data/dureader_robust-basic/basic.dev.json
 ```
-The model under `your_model_dir` (e.g. `finetuned_model` as we have provided) will be loaded for prediction. The predicted answers will be saved into `output/`.
+The model parameters under `your_model_dir` (e.g. `finetuned_model` as we have provided) will be loaded for prediction. The predicted answers will be saved into `output/`.
 
-## Evaluateion
+## Evaluation
 F1-score and exact match (EM) are used as evaluation metrics. Here we provide a script `evaluate-DR-robust.py` for evaluation.
 
 To evluate, run

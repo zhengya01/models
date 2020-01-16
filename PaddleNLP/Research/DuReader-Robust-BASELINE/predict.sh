@@ -8,17 +8,22 @@ fi
 echo "CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 
 
-if [ -z "$MODEL_PATH" ];then
-    MODEL_PATH="./finetuned_model"
+if [ -z "$PRETRAINED_MODEL_PATH" ];then
+    PRETRAINED_MODEL_PATH="./pretrained_model"
 fi
-echo "MODEL_PATH=$MODEL_PATH"
+echo "PRETRAINED_MODEL_PATH=$PRETRAINED_MODEL_PATH"
+
+if [ -z "$CKPT" ];then
+    CKPT="./fintuned_model"
+fi
+echo "CKPT=$CKPT"
 
 python -u src/run_mrc.py --use_cuda true \
                 --batch_size 24 \
                 --checkpoints output \
-                --init_checkpoint ${MODEL_PATH}/params \
-                --vocab_path ${MODEL_PATH}/vocab.txt \
-                --ernie_config ${MODEL_PATH}/ernie_config.json \
+                --init_checkpoint ${CKPT} \
+                --vocab_path ${PRETRAINED_MODEL_PATH}/vocab.txt \
+                --ernie_config ${PRETRAINED_MODEL_PATH}/ernie_config.json \
                 --max_seq_len 512 \
                 --do_lower_case true \
                 --doc_stride 128 \
