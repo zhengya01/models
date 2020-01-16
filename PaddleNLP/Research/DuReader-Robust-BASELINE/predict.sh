@@ -14,7 +14,7 @@ fi
 echo "PRETRAINED_MODEL_PATH=$PRETRAINED_MODEL_PATH"
 
 if [ -z "$CKPT" ];then
-    CKPT="./fintuned_model"
+    CKPT="./finetuned_model"
 fi
 echo "CKPT=$CKPT"
 
